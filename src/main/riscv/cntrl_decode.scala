@@ -35,7 +35,7 @@ class control_decode extends Module {
         io.MemRead := 0.U
         io.RegWrite := 0.U
         io.MemtoReg := 0.U
-        io.AluOp := 7.U
+        io.AluOp := 0.U
         io.OpA := 0.U
         io.OpB := 0.U
         io.ExtSel := 0.U
@@ -84,7 +84,7 @@ class control_decode extends Module {
             io.RegWrite := 1.U
             io.MemtoReg := 0.U
             io.AluOp := 3.U
-            io.OpA := 2.U
+            io.OpA := 1.U
             io.OpB := 0.U
             io.ExtSel := 0.U
             io.NextPc := 2.U
@@ -96,8 +96,8 @@ class control_decode extends Module {
             io.RegWrite := 1.U
             io.MemtoReg := 0.U
             io.AluOp := 3.U
-            io.OpA := 2.U
-            io.OpB := 0.U
+            io.OpA := 1.U
+            io.OpB := 1.U
             io.ExtSel := 0.U
             io.NextPc := 3.U
         }
@@ -132,9 +132,9 @@ class control_decode extends Module {
             io.RegWrite := 1.U
             io.MemtoReg := 0.U
             io.AluOp := 6.U
-            io.OpA := 3.U
+            io.OpA := 2.U
             io.OpB := 1.U
-            io.ExtSel := 1.U
+            io.ExtSel := 2.U
             io.NextPc := 0.U
         }
          

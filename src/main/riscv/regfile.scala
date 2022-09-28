@@ -1,8 +1,6 @@
 package riscv
 import chisel3._
 import chisel3.util._
-import chisel3.util.experimental.loadMemoryFromFile
-
 class RegFile extends Module {
   val io = IO (new Bundle {
 	val RegWrite = Input(UInt(1.W))
@@ -18,9 +16,9 @@ class RegFile extends Module {
 	io.rs1 := register(io.reg1)
 	io.rs2 := register(io.reg2)
 	when(io.RegWrite === 1.U){
-		when(io.rd === "b00000".U){
-            register(io.rd) := 0.S}
+		when(io.rd =/= "b00000".U){
+            register(io.rd) := io.WriteData}}
 		.otherwise {
-            register(io.rd) := io.WriteData}
+            register(io.rd) := 0.S
 }
 }

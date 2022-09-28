@@ -9,6 +9,8 @@ class Memory extends Module {
 	val ReadData = Output(UInt(32.W))
   })
 	val imem = Mem(1024,UInt(32.W))
-	io.ReadData := imem(io.WriteAddr)
+	
 	loadMemoryFromFile(imem,"E:/hello/Scala-Chisel-Learning-Journey/src/main/scala/riscv/abc.txt")
+	io.ReadData := imem.read(io.WriteAddr)
+	
 }

@@ -20,6 +20,8 @@ class AluCntrl extends Module {
         io.alucnt := Cat(io.AluOp(1,0),io.funct3)}
     .elsewhen(io.AluOp === "b011".U){
         io.alucnt := "b11111".U}
+    .elsewhen(io.AluOp === "b110".U){
+        io.alucnt := "b00000".U}
     .otherwise{
         io.alucnt:=DontCare
     }

@@ -6,15 +6,19 @@ class data_Mem extends Module {
     val io = IO (new Bundle {
         val MemWrite  = Input ( Bool () )
         val MemRead =Input(Bool())
-        val Data = Input(UInt(5.W)) 
-        val Addr = Input ( UInt (32. W ) )
-        val instRead = Output(UInt(32.W))
+        val Data = Input(SInt(32.W)) 
+        val Addr = Input ( UInt (8. W ) )
+        val instRead = Output(SInt(32.W))
     })
-    val mem=Mem(1024,UInt(32.W))
-    when (io.MemWrite){
+    val mem=Mem(1024,SInt(32.W))
+    when (io.MemWrite === 1.B){
         mem.write(io.Addr,io.Data)
 
     }
-    io.instRead:=mem.read(io.Addr)
+    when (io.MemRead===1.B){
+        io.instRead:=mem.read(io.Addr)
+        }
+    .otherwise{io.instRead:=0.S}
+    
 
 }

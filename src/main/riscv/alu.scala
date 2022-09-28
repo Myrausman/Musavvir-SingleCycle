@@ -49,6 +49,21 @@ class Alu extends Module {
 	.elsewhen (io.alucnt === ALU_SUB){io.out := io.in1 - io.in2}
 	//Jal Jalr
 	.elsewhen (io.alucnt === ALU_COPY_A || io.alucnt === ALU_COPY_B){io.out := io.in1}
-	
+	.elsewhen (io.alucnt === ALU_SLT || io.alucnt === ALU_SLTI){
+    when (io.in1<io.in2){
+      io.out:=1.S
+    }
+    .otherwise{
+      io.out:=0.S
+    }}
+  .elsewhen (io.alucnt === ALU_SLTU || io.alucnt === ALU_SLTIU){
+    when (io.in1.asUInt<io.in2.asUInt){
+      io.out:=1.S
+    }
+    .otherwise{
+      io.out:=0.S
+    }
+  }
 	.otherwise {io.out := DontCare}
+
 }
