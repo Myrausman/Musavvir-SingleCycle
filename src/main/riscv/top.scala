@@ -88,7 +88,7 @@ class Top extends Module {
 	
 	Pc.io.input := MuxCase(0.U,Array(
 		(Control.io.NextPc === 0.U) -> Pc.io.pc4,
-		(Control.io.NextPc === 1.U) ->  Mux(Branch.io.br_taken,Pc.io.pc4,(ImmediateGeneration.io.sb_imm).asUInt),
+		(Control.io.NextPc === 1.U) ->  Mux(Branch.io.br_taken,(ImmediateGeneration.io.sb_imm).asUInt,Pc.io.pc4),
 		(Control.io.NextPc === 2.U) -> (ImmediateGeneration.io.uj_imm).asUInt,
 		(Control.io.NextPc === 3.U) -> (Jalr.io.jalout).asUInt()
 	)) 
