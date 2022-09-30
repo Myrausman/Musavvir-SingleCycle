@@ -1,11 +1,14 @@
-<div><h1 > Musavvir </h1> <h1>RISCV-single-cycle</h1>
-A single cycle processor is a processor that carries out one instruction in a single clock cycle
+<div ><h1> MUSAVVIR </h1> 
 
-## Designed by Talha Ahmed
+<div align='center'><img src="https://readme-typing-svg.demolab.com?font=Arial&size=22&pause=1000&color=8510d8&multiline=true&width=435&lines=RISC-V+Single+Cycle+Core" alt="Typing SVG" /><br>
+<img align='center' src="https://readme-typing-svg.demolab.com?font=Arial&size=18&pause=1000&color=8510d8&multiline=true&width=435&lines=Designed+by+Maira+Usman" alt="Typing SVG" />
+</div>
+<br><br>
+A single cycle processor is a processor that carries out one instruction in a single clock cycle
 
 First of all get started by cloning this repository on your machine.
 ```
-git clone https://github.com/samadpls/RISCV-single-cycle.git
+git clone https://github.com/Myrausman/RISCV-single-cycle.git
 ```
 Create a .txt file and place the hexadecimal code of your instructions simulated on Venus (RISC-V Simulator)
 Each instruction's hexadecimal code must be on seperate line as following. This program consists of 9 instructions.
@@ -30,7 +33,7 @@ open Memory.scala
 ```
 Find the following line
 ```
-loadMemoryFromFile(mem,"/home/talha/riscv/shaheen/abc.txt")
+loadMemoryFromFile(imem,"E:/hello/Scala-Chisel-Learning-Journey/src/main/scala/riscv/abc.txt")
 ```
 Change the .txt file path to match your file that you created above storing your own program instructions.
 After setting up the Memory.scala file, go inside the shaheen folder.
