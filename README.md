@@ -8,7 +8,7 @@ A single cycle processor is a processor that carries out one instruction in a si
 
 First of all get started by cloning this repository on your machine.
 ```
-git clone https://github.com/Myrausman/RISCV-single-cycle.git
+git clone https://github.com/Myrausman/Musavvir-SingleCycle.git
 ```
 Create a .txt file and place the hexadecimal code of your instructions simulated on Venus (RISC-V Simulator)
 Each instruction's hexadecimal code must be on seperate line as following. This program consists of 9 instructions.
@@ -27,18 +27,18 @@ Then perform the following step
 ```
 cd src/main/scala/text.txt
 ```
-Open insmem.scala with this command. You can also manually go into the above path and open the file in your favorite text editor.
+Open instrmem.scala with this command. You can also manually go into the above path and open the file in your favorite text editor.
 ```
-open Memory.scala
+open instrmem.scala
 ```
 Find the following line
 ```
-loadMemoryFromFile(imem,"E:/hello/Scala-Chisel-Learning-Journey/src/main/scala/riscv/abc.txt")
+loadMemoryFromFile(imem,"E:\Musavvir-SingleCycle\src\main\riscv\abc.txt")
 ```
 Change the .txt file path to match your file that you created above storing your own program instructions.
-After setting up the Memory.scala file, go inside the shaheen folder.
+After setting up the Memory.scala file, go inside the Musavvir-SingleCycle folder.
 ```
-cd root/shaheen
+cd root/Musavvir-SingleCycle
 ```
 And enter
 ```
@@ -46,15 +46,15 @@ sbt
 ```
 When the terminal changes to this type
 ```
-sbt:shaheen>
+sbt:Musavvir-SingleCycle>
 ```
 Enter this command
 ```
-sbt:shaheen> test:runMain riscv.Launcher Top
+sbt:Musavvir-SingleCycle> test:runMain riscv.Launcher Top
 ```
 After you get success
 ```
-sbt:shaheen> test:runMain riscv.Launcher Top --backend-name verilator
+sbt:Musavvir-SingleCycle> test:runMain riscv.Launcher Top --backend-name verilator
 ```
 After success you will get a folder test_run_dir on root of your folder. Go into the examples folder inside.
 There you will find the folder named Top. Enter in it and you can find the Top.vcd file which you visualise on gtkwave to
