@@ -1,4 +1,4 @@
-<div><h1 > RISCV-single-cycle</h1>
+<div><h1 > Musavvir </h1> <h1>RISCV-single-cycle</h1>
 A single cycle processor is a processor that carries out one instruction in a single clock cycle
 
 ## Designed by Talha Ahmed
