@@ -11,7 +11,7 @@ class RegFile extends Module {
 	val rs1 = Output(SInt(32.W))
 	val rs2 = Output(SInt(32.W))
   })
-	val register = Reg(Vec(32,SInt(32.W)))
+	val register = RegInit(VecInit(Seq.fill(32)(0.S(32.W))))
 	register(0) := 0.S
 	io.rs1 := register(io.reg1)
 	io.rs2 := register(io.reg2)
