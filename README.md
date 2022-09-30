@@ -1,4 +1,4 @@
-<div ><h1> MUSAVVIR </h1> 
+<div ><h1> MUSAVVIR -مُصَوِّر</h1> 
 
 <div align='center'><img src="https://readme-typing-svg.demolab.com?font=Arial&size=22&pause=1000&color=8510d8&multiline=true&width=435&lines=RISC-V+Single+Cycle+Core" alt="Typing SVG" /><br>
 <img align='center' src="https://readme-typing-svg.demolab.com?font=Arial&size=18&pause=1000&color=8510d8&multiline=true&width=435&lines=Designed+by+Maira+Usman" alt="Typing SVG" />
